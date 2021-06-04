@@ -407,8 +407,9 @@ var script = {
           window.addEventListener('resize', this.xPositionOnResize);
         }
 
+        
         // add img index
-        this.imgIndex = prev;
+        this.imgIndex = typeof prev === "undefined" ? 0 : prev; 
         this.isVisible = true;
 
         // add events listener
@@ -916,7 +917,6 @@ var script = {
         return false
       }
       var item = this.items[imgIndex];
-    
       if(this.checkIfIsObject(imgIndex)) {
         return item[this.srcName]
       }

@@ -625,8 +625,9 @@ export default {
           window.addEventListener('resize', this.xPositionOnResize)
         }
 
+        
         // add img index
-        this.imgIndex = prev
+        this.imgIndex = typeof prev === `undefined` ? 0 : prev 
         this.isVisible = true
 
         // add events listener
@@ -1134,7 +1135,9 @@ export default {
         return false
       }
       const item = this.items[imgIndex]
-    
+      if(!item){ 
+
+      }
       if(this.checkIfIsObject(imgIndex)) {
         return item[this.srcName]
       }

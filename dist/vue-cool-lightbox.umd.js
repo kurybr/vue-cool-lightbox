@@ -411,8 +411,9 @@
             window.addEventListener('resize', this.xPositionOnResize);
           }
 
+          
           // add img index
-          this.imgIndex = prev;
+          this.imgIndex = typeof prev === "undefined" ? 0 : prev; 
           this.isVisible = true;
 
           // add events listener
@@ -920,7 +921,6 @@
           return false
         }
         var item = this.items[imgIndex];
-      
         if(this.checkIfIsObject(imgIndex)) {
           return item[this.srcName]
         }
@@ -1800,7 +1800,7 @@
     /* scoped */
     var __vue_scope_id__ = undefined;
     /* module identifier */
-    var __vue_module_identifier__ = "data-v-15a906c4";
+    var __vue_module_identifier__ = "data-v-a223c41c";
     /* functional template */
     var __vue_is_functional_template__ = false;
     /* style inject */
