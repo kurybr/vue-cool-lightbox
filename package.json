@@ -32,6 +32,7 @@
   "homepage": "https://vue-cool-lightbox.lucaspulliese.com",
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
+    "node-sass": "^6.0.0",
     "plyr": "^3.6.7",
     "vue": "^2.6.10"
   },
@@ -51,7 +52,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "minimist": "^1.2.0",
-    "node-sass": "^4.14.1",
     "rollup": "^1.14.4",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^9.3.4",

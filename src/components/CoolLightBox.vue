@@ -1133,8 +1133,8 @@ export default {
       if(imgIndex === null) {
         return false
       }
-
       const item = this.items[imgIndex]
+    
       if(this.checkIfIsObject(imgIndex)) {
         return item[this.srcName]
       }
@@ -1691,7 +1691,7 @@ export default {
     
     // getYoutube ID
     getYoutubeID(url) {
-
+      if(!url) return false;
       // youtube data
       const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
       const ytId = (url.match(youtubeRegex)) ? RegExp.$1 : false;
@@ -1725,7 +1725,7 @@ export default {
 
     // vimeo ID
     getVimeoID(url) {
-      
+      if(!url) return false;
       // if is vimeo video
       const result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
       if(result !== null) {
@@ -1737,7 +1737,7 @@ export default {
 
     // get vimeo url
     getVimeoUrl(url) {
-
+      if(!url) return false;
       // if is vimeo video
       const result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
       if(result !== null) {

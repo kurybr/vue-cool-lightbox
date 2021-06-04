@@ -915,8 +915,8 @@ var script = {
       if(imgIndex === null) {
         return false
       }
-
       var item = this.items[imgIndex];
+    
       if(this.checkIfIsObject(imgIndex)) {
         return item[this.srcName]
       }
@@ -1474,7 +1474,7 @@ var script = {
     
     // getYoutube ID
     getYoutubeID: function getYoutubeID(url) {
-
+      if(!url) { return false; }
       // youtube data
       var youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
       var ytId = (url.match(youtubeRegex)) ? RegExp.$1 : false;
@@ -1508,7 +1508,7 @@ var script = {
 
     // vimeo ID
     getVimeoID: function getVimeoID(url) {
-      
+      if(!url) { return false; }
       // if is vimeo video
       var result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
       if(result !== null) {
@@ -1520,7 +1520,7 @@ var script = {
 
     // get vimeo url
     getVimeoUrl: function getVimeoUrl(url) {
-
+      if(!url) { return false; }
       // if is vimeo video
       var result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
       if(result !== null) {

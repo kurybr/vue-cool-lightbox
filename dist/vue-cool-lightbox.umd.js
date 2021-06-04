@@ -919,8 +919,8 @@
         if(imgIndex === null) {
           return false
         }
-
         var item = this.items[imgIndex];
+      
         if(this.checkIfIsObject(imgIndex)) {
           return item[this.srcName]
         }
@@ -1478,7 +1478,7 @@
       
       // getYoutube ID
       getYoutubeID: function getYoutubeID(url) {
-
+        if(!url) { return false; }
         // youtube data
         var youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
         var ytId = (url.match(youtubeRegex)) ? RegExp.$1 : false;
@@ -1512,7 +1512,7 @@
 
       // vimeo ID
       getVimeoID: function getVimeoID(url) {
-        
+        if(!url) { return false; }
         // if is vimeo video
         var result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
         if(result !== null) {
@@ -1524,7 +1524,7 @@
 
       // get vimeo url
       getVimeoUrl: function getVimeoUrl(url) {
-
+        if(!url) { return false; }
         // if is vimeo video
         var result = url.match(/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_\-]+)?/i);
         if(result !== null) {
@@ -1800,7 +1800,7 @@
     /* scoped */
     var __vue_scope_id__ = undefined;
     /* module identifier */
-    var __vue_module_identifier__ = "data-v-c1756284";
+    var __vue_module_identifier__ = "data-v-15a906c4";
     /* functional template */
     var __vue_is_functional_template__ = false;
     /* style inject */
